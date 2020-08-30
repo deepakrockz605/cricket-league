@@ -1,0 +1,70 @@
+const PointDetails = {
+  teams: [
+    {
+      teamName: "Mumbai Indians (MI)",
+      matches: 14,
+      wins: 9,
+      looses: 5,
+      draw: 0,
+      NRR: 0.421,
+    },
+    {
+      teamName: "Chennai Super Kings (CSK)",
+      matches: 14,
+      wins: 9,
+      looses: 5,
+      draw: 0,
+      NRR: 0.131,
+    },
+    {
+      teamName: "Delhi Capitals (DC)",
+      matches: 14,
+      wins: 9,
+      looses: 5,
+      draw: 0,
+      NRR: 0.044,
+    },
+    {
+      teamName: "Sunrisers Hydrabad (SRH)",
+      matches: 14,
+      wins: 6,
+      looses: 8,
+      draw: 0,
+      NRR: 0.057,
+    },
+    {
+      teamName: "Kolkata Knight Riders (KKR)",
+      matches: 14,
+      wins: 6,
+      looses: 8,
+      draw: 0,
+      NRR: 0.028,
+    },
+    {
+      teamName: "Kings XI Punjab (KXIP)",
+      matches: 14,
+      wins: 6,
+      looses: 8,
+      draw: 0,
+      NRR: -0.251,
+    },
+    {
+      teamName: "Rajastan Royals (RR)",
+      matches: 14,
+      wins: 5,
+      looses: 8,
+      draw: 1,
+      NRR: -0.449,
+    },
+    {
+      teamName: "Royal Challengers Banglore (RCB)",
+      matches: 14,
+      wins: 5,
+      looses: 8,
+      draw: 1,
+      NRR: -0.607,
+    },
+  ],
+};
+
+export default PointDetails;

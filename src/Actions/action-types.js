@@ -1,0 +1,3 @@
+export const PLAYER_DETAILS = "PLAYER_DETAILS";
+export const PLAYER_PROFILE = "PLAYER_PROFILE";
+export const MATCH_SUMMARY = "MATCH_SUMMARY";

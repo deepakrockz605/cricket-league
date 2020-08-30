@@ -1,0 +1,337 @@
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4d4d4f;
+  text-align: left;
+}
+
+.dashboard {
+  ul {
+    li {
+      margin: 30px auto;
+      max-width: 420px;
+      button {
+        border-radius: 10px;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
+        background-color: #ffffff;
+        padding: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 600;
+        width: 100%;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        &:hover {
+          background: #4d4d4d;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.all-teams {
+  position: relative;
+  h3 {
+    padding-left: 60px;
+  }
+
+  ul {
+    padding-top: 5px;
+    li {
+      button {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 20px 0;
+        text-decoration: underline;
+        color: #0b216c;
+        cursor: pointer;
+        background: #fff;
+        border: none;
+      }
+    }
+  }
+}
+
+.team-players {
+  position: relative;
+  padding-bottom: 40px;
+  h3 {
+    padding-left: 60px;
+  }
+  h4 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 200px;
+      background: #4d4d4d;
+      left: 50%;
+      bottom: -15px;
+      transform: translate(-50%, -50%);
+    }
+  }
+  table {
+    margin-top: 60px;
+    thead {
+      tr {
+        td {
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+    }
+    tbody {
+      tr {
+        cursor: pointer;
+        &:hover {
+          background: rgba(0, 0, 0, 0.62);
+          color: #fff;
+        }
+      }
+    }
+  }
+  .datatable-search {
+    justify-content: flex-start;
+    .datatable-input {
+      margin-top: 40px;
+      width: 100%;
+    }
+  }
+}
+
+.player-profile {
+  padding: 40px;
+  .card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    .card-body {
+      padding-bottom: 0;
+    }
+    .playername {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 500;
+      padding-bottom: 15px;
+    }
+    .playerRole {
+      margin: 0;
+      padding-bottom: 10px;
+      font-weight: 400;
+      color: #4d4d4d;
+    }
+    .material-icons {
+      display: block;
+      text-align: center;
+      font-size: 70px;
+    }
+    table {
+      margin-top: 10px;
+      tr {
+        &:last-child {
+          border-bottom: none;
+        }
+        td {
+          font-size: 14px;
+          font-weight: 500;
+          &.firstCol {
+            width: 40%;
+            text-align: right;
+          }
+          &.midCol {
+            width: 20%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.searchPlayer {
+  padding-top: 10px;
+  .input-field.col label {
+    left: 0;
+  }
+  & + table {
+    margin-top: 30px;
+  }
+}
+
+.mdb-datatable-filter {
+  width: 100%;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.all-venues {
+  position: relative;
+  h3 {
+    padding-left: 60px;
+    padding-bottom: 20px;
+  }
+  ul {
+    li {
+      margin: 15px 0;
+      .venueBox {
+        border-radius: 10px;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
+        padding: 10px 20px;
+        .statiumDetails {
+          font-size: 20px;
+          font-weight: 600;
+          margin: 0;
+          padding-bottom: 10px;
+        }
+        .cityDetails {
+          font-size: 16px;
+          font-weight: 400;
+          margin: 0;
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+}
+
+.points-table {
+  h3 {
+    padding-left: 60px;
+  }
+  table {
+    tbody {
+      tr {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.all-matches {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      width: 49%;
+      margin: 15px 0;
+      cursor: pointer;
+      .match-list {
+        border-radius: 10px;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
+        background-color: #ffffff;
+        padding: 15px;
+        transition: 0.2s ease-in;
+        &:hover {
+          background: #595959;
+          color: #fff;
+        }
+        span {
+          font-size: 12px;
+          padding-bottom: 5px;
+          display: block;
+        }
+        p {
+          margin: 0;
+        }
+        .match-wrapper {
+          .match-team {
+            display: flex;
+            padding: 5px 0;
+            .matchteam-name {
+              width: 100%;
+              font-weight: 500;
+              font-size: 14px;
+            }
+          }
+        }
+        .match-result {
+          font-size: 14px;
+          padding-top: 5px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.match-summary {
+  table {
+    tr {
+      &:hover {
+        background: #fff !important;
+        color: initial !important;
+      }
+    }
+  }
+  .player-profile .card {
+    max-width: 600px !important;
+  }
+  .player-profile .card table tr td.firstCol {
+    width: 31% !important;
+  }
+  .player-profile .card table tr td.midCol {
+    width: 13% !important;
+  }
+}
+
+.colunderline {
+  text-decoration: underline;
+}
+
+.backICon {
+  position: absolute;
+  left: 0px;
+  font-size: 35px;
+  top: -2px;
+  cursor: pointer;
+}
+
+.player-profile {
+  .backICon {
+    left: 20px;
+    font-size: 35px !important;
+    top: 10px;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.home {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  h2 {
+    font-size: 35px;
+    line-height: 50px;
+    font-weight: 500;
+  }
+  a {
+    background: transparent;
+    color: #03a9f4;
+    border: 1px solid;
+    padding: 15px 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s all;
+    margin: 20px;
+    &:hover{
+      background: #03a9f4;
+      color: #fff;
+      border: 1px solid #03a9f4;
+    }
+  }
+}
