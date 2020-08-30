@@ -13,7 +13,7 @@ const PlayerDetails = {
       team: "CSK",
     },
     {
-      playername: "SR Watson ",
+      playername: "SR Watson",
       role: "All Rounder",
       battingStyle: "Right Hand Bat",
       bowlingStyle: "Right Arm Medium Pacer",
@@ -28,7 +28,7 @@ const PlayerDetails = {
       team: "CSK",
     },
     {
-      playername: "SK Raina ",
+      playername: "SK Raina",
       role: "Batsman",
       battingStyle: "Left Hand Bat",
       bowlingStyle: "-",
@@ -682,7 +682,7 @@ const PlayerDetails = {
       team: "MI",
     },
     {
-      playername: "JJ Bumrah ",
+      playername: "JJ Bumrah",
       role: "Bowler",
       battingStyle: "Right Hand Bat",
       bowlingStyle: "Right-arm offbreak",

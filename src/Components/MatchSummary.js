@@ -1,7 +1,8 @@
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import teamData from "../Data/TeamDetails";
-import { playerDetails } from "../Actions/index";
+import { playerDetails , playerProfile } from "../Actions/index";
+
 
 class MatchSummary extends PureComponent {
   componentDidMount = e => {
@@ -25,6 +26,11 @@ class MatchSummary extends PureComponent {
   handleGoback = () =>{
     this.props.history.goBack()
   }
+
+  handlePlayer = (e) => {
+    this.props.playerProfile(e);
+    this.props.history.push("/player-profile");
+  };
 
   render() {
     const matchData = this.props.state.matchData;
@@ -73,6 +79,7 @@ class MatchSummary extends PureComponent {
                   <td className="midCol">:</td>
                   <td
                     className="lastCol colunderline"
+                    onClick={(e) => this.handlePlayer(matchData.mom)}
                   >
                     {matchData.mom}
                   </td>
@@ -82,6 +89,7 @@ class MatchSummary extends PureComponent {
                   <td className="midCol">:</td>
                   <td
                     className="lastCol colunderline"
+                    onClick={(e) => this.handlePlayer(matchData.bom)}
                   >
                     {matchData.bom}
                   </td>
@@ -91,6 +99,7 @@ class MatchSummary extends PureComponent {
                   <td className="midCol">:</td>
                   <td
                     className="lastCol colunderline"
+                    onClick={(e) => this.handlePlayer(matchData.bestfielder)}
                   >
                     {matchData.bestfielder}
                   </td>
@@ -124,7 +133,10 @@ const mapDispatchToProps = (dispatch) => {
   return {
     playerDetails: (data) => {
       dispatch(playerDetails(data));
-    }
+    },
+    playerProfile: (name) => {
+      dispatch(playerProfile(name));
+    },
   };
 };
 

@@ -5,9 +5,21 @@ import { connect } from "react-redux";
 import { playerDetails } from "../Actions/index";
 
 class PointsTable extends PureComponent {
-  
-  componentWillMount = async () => {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isloaded: false,
+      sortedData: [],
+    };
+  }
+
+  componentDidMount = async () => {
     await this.setState({ PointDetails });
+    let sortedData = this.state.PointDetails.teams.sort(function (a, b) {
+      return b.points - a.points || b.NRR - a.NRR;
+    });
+    this.setState({ sortedData });
   };
 
   handleTeam = async (e) => {
@@ -45,7 +57,7 @@ class PointsTable extends PureComponent {
               </tr>
             </thead>
             <tbody>
-              {this.state.PointDetails.teams.map((points, index) => (
+              {this.state.sortedData.map((points, index) => (
                 <tr
                   key={index}
                   onClick={(e) => this.handleTeam(points.teamName)}

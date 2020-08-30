@@ -1,13 +1,6 @@
 const PointDetails = {
   teams: [
-    {
-      teamName: "Mumbai Indians (MI)",
-      matches: 14,
-      wins: 9,
-      looses: 5,
-      draw: 0,
-      NRR: 0.421,
-    },
+    
     {
       teamName: "Chennai Super Kings (CSK)",
       matches: 14,
@@ -15,6 +8,7 @@ const PointDetails = {
       looses: 5,
       draw: 0,
       NRR: 0.131,
+      points:18
     },
     {
       teamName: "Delhi Capitals (DC)",
@@ -23,6 +17,7 @@ const PointDetails = {
       looses: 5,
       draw: 0,
       NRR: 0.044,
+      points:18
     },
     {
       teamName: "Sunrisers Hydrabad (SRH)",
@@ -31,6 +26,7 @@ const PointDetails = {
       looses: 8,
       draw: 0,
       NRR: 0.057,
+      points:12
     },
     {
       teamName: "Kolkata Knight Riders (KKR)",
@@ -39,6 +35,7 @@ const PointDetails = {
       looses: 8,
       draw: 0,
       NRR: 0.028,
+      points:12
     },
     {
       teamName: "Kings XI Punjab (KXIP)",
@@ -47,6 +44,7 @@ const PointDetails = {
       looses: 8,
       draw: 0,
       NRR: -0.251,
+      points:12
     },
     {
       teamName: "Rajastan Royals (RR)",
@@ -55,6 +53,7 @@ const PointDetails = {
       looses: 8,
       draw: 1,
       NRR: -0.449,
+      points:11
     },
     {
       teamName: "Royal Challengers Banglore (RCB)",
@@ -63,7 +62,17 @@ const PointDetails = {
       looses: 8,
       draw: 1,
       NRR: -0.607,
+      points:11
     },
+    {
+      teamName: "Mumbai Indians (MI)",
+      matches: 14,
+      wins: 9,
+      looses: 5,
+      draw: 0,
+      NRR: 0.421,
+      points:18
+    }
   ],
 };
 

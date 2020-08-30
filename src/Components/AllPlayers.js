@@ -11,11 +11,16 @@ class AllPlayers extends PureComponent {
     this.state = {
       PlayerDetails: [],
       value: "",
+      sortedData: [],
     };
   }
 
-  componentWillMount = async () => {
+  componentDidMount = async () => {
     await this.setState({ PlayerDetails: PlayerDetails });
+    let sortedData = this.state.PlayerDetails.players.sort((a, b) =>
+      a.playername !== b.playername ? (a.playername < b.playername ? -1 : 1) : 0
+    );
+    this.setState({ sortedData });
   };
 
   handleChange = async (e) => {
@@ -39,9 +44,10 @@ class AllPlayers extends PureComponent {
     this.props.history.goBack();
   };
   render() {
-    const data = this.state.PlayerDetails;
-
+    const data = this.state.sortedData;
+    
     return (
+      
       <div className="team-players">
         <h3>All Players</h3>
         <span className="material-icons backICon" onClick={this.handleGoback}>
@@ -80,7 +86,7 @@ class AllPlayers extends PureComponent {
           <tbody>
             <FilterResults
               value={this.state.value}
-              data={data.players}
+              data={data}
               renderResults={(results) => (
                 <>
                   {results.map((player, index) => (

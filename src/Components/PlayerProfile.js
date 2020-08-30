@@ -16,8 +16,9 @@ class PlayerProfile extends PureComponent {
       this.props.history.push("/");
     } else {
       await this.setState({ PlayerDetails });
+      let playerName = this.props.state.playersName.trim()
       let cricketrDetails = this.state.PlayerDetails.players.find(
-        (cric) => cric.playername === this.props.state.playersName
+        (cric) => cric.playername.trim() === playerName
       );
 
       await this.setState({ cricketrDetails });

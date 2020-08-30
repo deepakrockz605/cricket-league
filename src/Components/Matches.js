@@ -4,8 +4,15 @@ import { connect } from "react-redux";
 import { matchSummary } from "../Actions/index";
 
 class Matches extends PureComponent {
-  componentWillMount = async () => {
-    await this.setState({ MatchDetails });
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isDataLoaded: false,
+    };
+  }
+  componentDidMount = async () => {
+    await this.setState({ MatchDetails, isDataLoaded: true });
   };
 
   handleSummary = (e) => {
@@ -19,38 +26,45 @@ class Matches extends PureComponent {
 
   render() {
     return (
-      <div className="all-matches relative">
-        <h3 className="center">All Matches</h3>
-        <span className="material-icons backICon" onClick={this.handleGoback}>
-          keyboard_backspace
-        </span>
-        <ul>
-          {this.state.MatchDetails.matches.map((match, index) => (
-            <li key={index} onClick={(e) => this.handleSummary(match)}>
-              <div className="match-list">
-                <span>{match.match} Match</span>
-                <div className="match-wrapper">
-                  <div className="match-team">
-                    <p className="matchteam-name">{match.opponnet1}</p>
-                    <p className="matchteam-name matchScore">
-                      {match.opponnet1Score}
+      <>
+        {this.state.isDataLoaded ? (
+          <div className="all-matches relative">
+            <h3 className="center">All Matches</h3>
+            <span
+              className="material-icons backICon"
+              onClick={this.handleGoback}
+            >
+              keyboard_backspace
+            </span>
+            <ul>
+              {this.state.MatchDetails.matches.map((match, index) => (
+                <li key={index} onClick={(e) => this.handleSummary(match)}>
+                  <div className="match-list">
+                    <span>{match.match} Match</span>
+                    <div className="match-wrapper">
+                      <div className="match-team">
+                        <p className="matchteam-name">{match.opponnet1}</p>
+                        <p className="matchteam-name matchScore">
+                          {match.opponnet1Score}
+                        </p>
+                      </div>
+                      <div className="match-team">
+                        <p className="matchteam-name">{match.opponnet2}</p>
+                        <p className="matchteam-name matchScore">
+                          {match.opponnet2Score}
+                        </p>
+                      </div>
+                    </div>
+                    <p className="match-result">
+                      {match[match.winner] + " " + match.result}
                     </p>
                   </div>
-                  <div className="match-team">
-                    <p className="matchteam-name">{match.opponnet2}</p>
-                    <p className="matchteam-name matchScore">
-                      {match.opponnet2Score}
-                    </p>
-                  </div>
-                </div>
-                <p className="match-result">
-                  {match[match.winner] + " " + match.result}
-                </p>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+      </>
     );
   }
 }
