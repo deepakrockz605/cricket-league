@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cricketleague-dev-113318-authRole",
+      "UnauthRoleArn": "arn:aws:iam::383296379294:role/amplify-cricketleague-dev-113318-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::383296379294:role/amplify-cricketleague-dev-113318-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cricketleague-dev-113318-deployment",
+      "UnauthRoleName": "amplify-cricketleague-dev-113318-unauthRole",
+      "StackName": "amplify-cricketleague-dev-113318",
+      "StackId": "arn:aws:cloudformation:us-east-1:383296379294:stack/amplify-cricketleague-dev-113318/28652cb0-fbd0-11ea-88bf-12c270bd7978",
+      "AmplifyAppId": "d39nal99yrb4j2"
+    },
+    "categories": {
+      "auth": {
+        "cricketleaguebc16b14f": {}
+      }
+    }
+  }
+}

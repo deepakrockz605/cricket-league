@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "cricketleaguebc16b14f": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

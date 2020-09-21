@@ -9,6 +9,10 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducers from "./Reducer/rootReducer";
 
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
+Amplify.configure(config);
+
 const store = createStore(reducers);
 
 ReactDOM.render(
